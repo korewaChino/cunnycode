@@ -22,10 +22,16 @@ fn into_ccode(input: &str) -> String {
 fn from_ccode(input: &str) -> String {
     let i = input
         .trim_start_matches("^")
+        .replace("^", "/ ")
+        .replace("  ", " / ")
         .replace(DOT, ".")
         .replace(DASH, "_")
-        .replace("^", "/ ");
-        // remove invalid characters that aren't utf8
+        .chars()
+        // filter out any characters that are not morse code
+        .filter(|c| c == &'.' || c == &'_' || c == &' ' || c == &'/')
+        .collect::<String>();
+
+    println!("{}", i);
 
     crypto_morse::decode(&i)
 }
@@ -54,7 +60,6 @@ fn main() {
         }
     }
 }
-
 
 #[cfg(test)]
 mod tests {
