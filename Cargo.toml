@@ -1,0 +1,10 @@
+[package]
+name = "cunnycode"
+version = "0.1.0"
+edition = "2021"
+license = "WTFPL"
+
+[dependencies]
+clap = { version = "4.5.18", features = ["derive"] }
+clap-stdin = "0.5.1"
+crypto-morse = "0.2.0"
