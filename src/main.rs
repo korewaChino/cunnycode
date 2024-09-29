@@ -31,8 +31,6 @@ fn from_ccode(input: &str) -> String {
         .filter(|c| c == &'.' || c == &'_' || c == &' ' || c == &'/')
         .collect::<String>();
 
-    println!("{}", i);
-
     crypto_morse::decode(&i)
 }
 
