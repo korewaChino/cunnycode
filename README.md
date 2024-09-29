@@ -13,4 +13,4 @@ Inspired by [this tweet](https://x.com/SethC1995/status/1839472034721456176)
 
 ## License
 
-do whatever the fuck you want this this idgaf
+do whatever the fuck you want idgaf
